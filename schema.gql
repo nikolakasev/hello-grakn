@@ -1,0 +1,51 @@
+define
+
+person sub entity,
+  has name,
+  plays contracting;
+
+name sub attribute,
+  datatype string;
+
+price sub attribute,
+  datatype double;
+
+year sub attribute,
+  datatype long;
+
+start-date sub attribute,
+  datatype date;
+
+end-date sub attribute,
+  datatype date;
+
+city sub attribute,
+  datatype string;
+
+street sub attribute,
+  datatype string;
+
+street_number sub attribute,
+  datatype long;
+
+house sub entity,
+  has price,
+  has year,
+  plays contracted,
+  plays located_at;
+
+address sub entity,
+  has city,
+  has street,
+  has street_number,
+  plays locating;
+
+contract sub relation,
+  has start-date,
+  has end-date,
+  relates contracting,
+  relates contracted;
+
+location sub relation,
+  relates located_at,
+  relates locating;
