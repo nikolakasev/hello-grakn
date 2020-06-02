@@ -1,0 +1,5 @@
+match
+$p isa person, has name "John";
+$a isa address;
+($p, $a) isa lives;
+get $a;

@@ -2,7 +2,8 @@ define
 
 person sub entity,
   has name,
-  plays contracting;
+  plays contracting,
+  plays lives_on;
 
 name sub attribute,
   datatype string;
@@ -38,7 +39,8 @@ address sub entity,
   has city,
   has street,
   has street_number,
-  plays locating;
+  plays locating,
+  plays hosts;
 
 contract sub relation,
   has start-date,
@@ -49,3 +51,7 @@ contract sub relation,
 location sub relation,
   relates located_at,
   relates locating;
+
+lives sub relation,
+  relates lives_on,
+  relates hosts;

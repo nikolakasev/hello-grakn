@@ -1,0 +1,10 @@
+define
+
+persons-address sub rule,
+when {
+  (located_at: $h, locating: $a) isa location;
+  (contracted: $h, contracting: $p) isa contract;
+},
+then {
+  (lives_on: $p, hosts: $a) isa lives;
+};

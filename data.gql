@@ -1,0 +1,17 @@
+insert
+
+$a isa address,
+  has city 'Munchen',
+  has street 'Dianastraße',
+  has street_number 3,
+  has post_code '80538';
+
+$p isa person,
+  has name 'Peter';
+
+$h isa house,
+  has price 351000,
+  has year 1965;
+
+(located_at: $h, locating: $a) isa location;
+(contracted: $h, contracting: $p) isa contract;
